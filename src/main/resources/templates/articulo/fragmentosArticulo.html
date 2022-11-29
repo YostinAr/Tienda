@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html  xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:th="http://wwww.thymeleaf.org"
+       xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <head th:replace="layout/plantilla :: head">
+        <title>TechShop</title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+         <section th:fragment="botonesAgregar" class="py-4 mb-4 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3" sec:authorize="hasRole('ROLE_ADMIN')">   
+                        <button 
+                            type="button" 
+                            class="btn btn-primary btn-block" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#agregarArticulo">
+                            <i class="fas fa-plus"></i> [[#{accion.agregar}]]
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section th:fragment="listadoArticulos" id="articulos">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>[[#{articulo.titulo}]]</h4>
+                            </div>
+                            <div th:if="${articulos != null and !articulos.empty}">
+                                <table class="table table-stryped">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th>#</th>
+                                            <th th:text="#{articulo.nombre}">Nombre</th>
+                                            <th th:text="#{articulo.limite}">Límite</th>
+                                            <th></th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr th:each="articulo, contador : ${articulos}">
+                                            <td>[[${contador.count}]]</td>
+                                            <td>[[${articulo.nombre} + ' ' + ${articulo.apellidos}]]</td>
+                                            <td class="text-end">[[${new java.text.DecimalFormat('$#,##0.00').format(articulo.credito.limite)}]]</td>
+                                            <td>
+                                                <a sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/articulo/eliminar/}+${articulo.idArticulo}"
+                                                   class="btn btn-danger">
+                                                    <i class="fas fa-trash"></i> [[#{accion.eliminar}]]
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/articulo/modificar/}+${articulo.idArticulo}"
+                                                   class="btn btn-success">
+                                                    <i class="fas fa-pen"></i> [[#{accion.actualizar}]]
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="text-center p-2" th:if="${articulos == null or articulos.empty}">
+                                <span th:text="#{articulo.no_mostrar}">Lista vacía</span>
+                            </div>
+                        </div>
+                    </div>
+                       <div class="col-md-3">
+                        <div class="card text-center bg-danger text-white mb-3">
+                            <div class="card-body">
+                                <h3 th:text="#{articulo.limiteTotal}">Límite Total</h3>
+                                <h5 class="display-6">
+                                   [[${new java.text.DecimalFormat('$#,##0.00').format(limiteTotal)}]] 
+                                </h5>
+                            </div>
+                        </div>
+
+                        <div class="card text-center bg-success text-white mb-3">
+                            <div class="card-body">
+                                <h3 th:text="#{articulo.totalArticulos}">Total Articulos</h3>
+                                <h4 class="display-4">
+                                    <i class="fas fa-users"></i> [[${totalArticulos}]]
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                 
+        <section th:fragment="agregarArticulo">
+            <div id="agregarArticulo" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header bg-info text-white">
+                            <h5 class="modal-title" th:text="#{accion.agregar}">Agregar Articulo</h5>
+                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div> 
+                        <form th:action="@{/articulo/guardar}" th:object="${articulo}"
+                              method="POST" class="was-validated">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="nombre" th:text="#{articulo.nombre}">Nombre</label>
+                                    <input type="text" class="form-control" name="nombre" required="true">
+                                </div>
+                                <div class="form-group">
+                                    <label for="apellidos" th:text="#{articulo.apellidos}">Apellidos</label>
+                                    <input type="text" class="form-control" name="apellidos" required="true">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" th:text="#{articulo.correo}">Correo</label>
+                                    <input type="email" class="form-control" name="correo" required="true">
+                                </div>
+                                <div class="form-group">
+                                    <label for="telefono" th:text="#{articulo.telefono}">Teléfono</label>
+                                    <input type="tel" class="form-control" name="telefono">
+                                </div>
+                                <div class="form-group">
+                                    <label for="limite" th:text="#{articulo.limite}">Límite</label>
+                                    <input type="number" class="form-control" name="credito.limite" required="true" step="any">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-primary" type="submit" th:text="#{accion.guardar}">Guardar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section th:fragment="editarArticulo">            
+            <form method="POST"
+                  th:action="@{/articulo/guardar}"
+                  th:object="${articulo}"
+                  class="was-validated">
+                <input type="hidden" name="idArticulo" th:field="*{idArticulo}"/>
+                <section th:replace="articulo/fragmentosArticulo :: botonesEditar"/> 
+                <div id="details">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4>[[#{accion.actualizar}]]</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            <label for="nombre" th:text="#{articulo.nombre}">Nombre: </label>
+                                            <input type="text" class="form-control" name="nombre" th:field="*{nombre}"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="apellidos" th:text="#{articulo.apellidos}">Apellidos: </label>
+                                            <input type="text"  class="form-control" name="apellidos" th:field="*{apellidos}"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="correo" th:text="#{articulo.correo}">Correo: </label>
+                                            <input type="email"  class="form-control" name="correo" th:field="*{correo}"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="telefono" th:text="#{articulo.telefono}">Teléfono: </label>
+                                            <input type="tel"  class="form-control" name="telefono" th:field="*{telefono}"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="limite" th:text="#{articulo.limite}">Limite: </label>
+                                            <input type="number"  class="form-control" name="limite" th:field="*{credito.limite}"/>
+                                        </div>                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+        
+                <section th:fragment="botonesEditar">
+            <div id="actions" class="py-4 mb-4 bg-light">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <a th:href="@{/articulo/listado}" class="btn btn-ligth btn-block">
+                                <i class="fas fa-arrow-left"></i> [[#{accion.regresar}]]
+                            </a>
+                        </div>
+                        <div class="col-md-3">
+                            <button type="submit" class="btn btn-success btn-block">
+                                <i class="fas fa-check"></i> [[#{accion.guardar}]]
+                            </button>
+                        </div>
+                        <div class="col-md-3">
+                            <a th:href="@{/articulo/eliminar/}+${articulo.idArticulo}"
+                               class="btn btn-danger btn-block">
+                                <i class="fas fa-trash"></i> [[#{accion.eliminar}]]
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                
+    </body>
+</html>
