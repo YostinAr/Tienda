@@ -23,7 +23,7 @@ public class WebConfig implements WebMvcConfigurer{
     
     
     @Bean
-    public LocaleChangeInterceptor localchangeInterceptor(){
+    public LocaleChangeInterceptor localChangeInterceptor(){
         var lci = new LocaleChangeInterceptor();
         lci.setParamName("lang");
                 return lci;
@@ -32,7 +32,7 @@ public class WebConfig implements WebMvcConfigurer{
     
     @Override
     public void addInterceptors(InterceptorRegistry registro){
-        registro.addInterceptor(localchangeInterceptor());
+        registro.addInterceptor(localChangeInterceptor());
     }
     @Override
     public void addViewControllers(ViewControllerRegistry ver){

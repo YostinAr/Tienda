@@ -1,21 +1,26 @@
-C:\Users\Yostin Arias\Desktop\Tienda_m\src\main\java\com\tienda\controller\ArticuloController.java
-C:\Users\Yostin Arias\Desktop\Tienda_m\src\main\java\com\tienda\dao\CreditoDao.java
-C:\Users\Yostin Arias\Desktop\Tienda_m\src\main\java\com\tienda\domain\Credito.java
-C:\Users\Yostin Arias\Desktop\Tienda_m\src\main\java\com\tienda\service\ClienteServiceImpl.java
-C:\Users\Yostin Arias\Desktop\Tienda_m\src\main\java\com\tienda\controller\ClienteController.java
-C:\Users\Yostin Arias\Desktop\Tienda_m\src\main\java\com\tienda\TiendaApplication.java
-C:\Users\Yostin Arias\Desktop\Tienda_m\src\main\java\com\tienda\domain\Categoria.java
-C:\Users\Yostin Arias\Desktop\Tienda_m\src\main\java\com\tienda\SecurityConfig.java
-C:\Users\Yostin Arias\Desktop\Tienda_m\src\main\java\com\tienda\controller\CategoriaController.java
-C:\Users\Yostin Arias\Desktop\Tienda_m\src\main\java\com\tienda\service\ArticuloServiceImpl.java
-C:\Users\Yostin Arias\Desktop\Tienda_m\src\main\java\com\tienda\dao\ClienteDao.java
-C:\Users\Yostin Arias\Desktop\Tienda_m\src\main\java\com\tienda\service\CategoriaService.java
-C:\Users\Yostin Arias\Desktop\Tienda_m\src\main\java\com\tienda\dao\CategoriaDao.java
-C:\Users\Yostin Arias\Desktop\Tienda_m\src\main\java\com\tienda\domain\Cliente.java
-C:\Users\Yostin Arias\Desktop\Tienda_m\src\main\java\com\tienda\controller\IndexController.java
-C:\Users\Yostin Arias\Desktop\Tienda_m\src\main\java\com\tienda\service\ClienteService.java
-C:\Users\Yostin Arias\Desktop\Tienda_m\src\main\java\com\tienda\dao\ArticuloDao.java
-C:\Users\Yostin Arias\Desktop\Tienda_m\src\main\java\com\tienda\WebConfig.java
-C:\Users\Yostin Arias\Desktop\Tienda_m\src\main\java\com\tienda\domain\Articulo.java
-C:\Users\Yostin Arias\Desktop\Tienda_m\src\main\java\com\tienda\service\ArticuloService.java
-C:\Users\Yostin Arias\Desktop\Tienda_m\src\main\java\com\tienda\service\CategoriaServiceImpl.java
+C:\Users\Yostin Arias\Desktop\Fidélitas\Cuarto Cuatrimesttre\Desarrollo web\Sem 1 html\Proyecto_tienda\Tienda\Tienda_m\src\main\java\com\tienda\service\ClienteServiceImpl.java
+C:\Users\Yostin Arias\Desktop\Fidélitas\Cuarto Cuatrimesttre\Desarrollo web\Sem 1 html\Proyecto_tienda\Tienda\Tienda_m\src\main\java\com\tienda\dao\ArticuloDao.java
+C:\Users\Yostin Arias\Desktop\Fidélitas\Cuarto Cuatrimesttre\Desarrollo web\Sem 1 html\Proyecto_tienda\Tienda\Tienda_m\src\main\java\com\tienda\WebConfig.java
+C:\Users\Yostin Arias\Desktop\Fidélitas\Cuarto Cuatrimesttre\Desarrollo web\Sem 1 html\Proyecto_tienda\Tienda\Tienda_m\src\main\java\com\tienda\Encriptar.java
+C:\Users\Yostin Arias\Desktop\Fidélitas\Cuarto Cuatrimesttre\Desarrollo web\Sem 1 html\Proyecto_tienda\Tienda\Tienda_m\src\main\java\com\tienda\controller\ClienteController.java
+C:\Users\Yostin Arias\Desktop\Fidélitas\Cuarto Cuatrimesttre\Desarrollo web\Sem 1 html\Proyecto_tienda\Tienda\Tienda_m\src\main\java\com\tienda\SecurityConfig.java
+C:\Users\Yostin Arias\Desktop\Fidélitas\Cuarto Cuatrimesttre\Desarrollo web\Sem 1 html\Proyecto_tienda\Tienda\Tienda_m\src\main\java\com\tienda\domain\Categoria.java
+C:\Users\Yostin Arias\Desktop\Fidélitas\Cuarto Cuatrimesttre\Desarrollo web\Sem 1 html\Proyecto_tienda\Tienda\Tienda_m\src\main\java\com\tienda\dao\UsuarioDao.java
+C:\Users\Yostin Arias\Desktop\Fidélitas\Cuarto Cuatrimesttre\Desarrollo web\Sem 1 html\Proyecto_tienda\Tienda\Tienda_m\src\main\java\com\tienda\service\CategoriaServiceImpl.java
+C:\Users\Yostin Arias\Desktop\Fidélitas\Cuarto Cuatrimesttre\Desarrollo web\Sem 1 html\Proyecto_tienda\Tienda\Tienda_m\src\main\java\com\tienda\service\ClienteService.java
+C:\Users\Yostin Arias\Desktop\Fidélitas\Cuarto Cuatrimesttre\Desarrollo web\Sem 1 html\Proyecto_tienda\Tienda\Tienda_m\src\main\java\com\tienda\domain\Usuario.java
+C:\Users\Yostin Arias\Desktop\Fidélitas\Cuarto Cuatrimesttre\Desarrollo web\Sem 1 html\Proyecto_tienda\Tienda\Tienda_m\src\main\java\com\tienda\dao\ClienteDao.java
+C:\Users\Yostin Arias\Desktop\Fidélitas\Cuarto Cuatrimesttre\Desarrollo web\Sem 1 html\Proyecto_tienda\Tienda\Tienda_m\src\main\java\com\tienda\service\ArticuloService.java
+C:\Users\Yostin Arias\Desktop\Fidélitas\Cuarto Cuatrimesttre\Desarrollo web\Sem 1 html\Proyecto_tienda\Tienda\Tienda_m\src\main\java\com\tienda\domain\Rol.java
+C:\Users\Yostin Arias\Desktop\Fidélitas\Cuarto Cuatrimesttre\Desarrollo web\Sem 1 html\Proyecto_tienda\Tienda\Tienda_m\src\main\java\com\tienda\controller\IndexController.java
+C:\Users\Yostin Arias\Desktop\Fidélitas\Cuarto Cuatrimesttre\Desarrollo web\Sem 1 html\Proyecto_tienda\Tienda\Tienda_m\src\main\java\com\tienda\service\CategoriaService.java
+C:\Users\Yostin Arias\Desktop\Fidélitas\Cuarto Cuatrimesttre\Desarrollo web\Sem 1 html\Proyecto_tienda\Tienda\Tienda_m\src\main\java\com\tienda\domain\Articulo.java
+C:\Users\Yostin Arias\Desktop\Fidélitas\Cuarto Cuatrimesttre\Desarrollo web\Sem 1 html\Proyecto_tienda\Tienda\Tienda_m\src\main\java\com\tienda\service\UsuarioService.java
+C:\Users\Yostin Arias\Desktop\Fidélitas\Cuarto Cuatrimesttre\Desarrollo web\Sem 1 html\Proyecto_tienda\Tienda\Tienda_m\src\main\java\com\tienda\domain\Credito.java
+C:\Users\Yostin Arias\Desktop\Fidélitas\Cuarto Cuatrimesttre\Desarrollo web\Sem 1 html\Proyecto_tienda\Tienda\Tienda_m\src\main\java\com\tienda\domain\Cliente.java
+C:\Users\Yostin Arias\Desktop\Fidélitas\Cuarto Cuatrimesttre\Desarrollo web\Sem 1 html\Proyecto_tienda\Tienda\Tienda_m\src\main\java\com\tienda\service\ArticuloServiceImpl.java
+C:\Users\Yostin Arias\Desktop\Fidélitas\Cuarto Cuatrimesttre\Desarrollo web\Sem 1 html\Proyecto_tienda\Tienda\Tienda_m\src\main\java\com\tienda\controller\ArticuloController.java
+C:\Users\Yostin Arias\Desktop\Fidélitas\Cuarto Cuatrimesttre\Desarrollo web\Sem 1 html\Proyecto_tienda\Tienda\Tienda_m\src\main\java\com\tienda\dao\CategoriaDao.java
+C:\Users\Yostin Arias\Desktop\Fidélitas\Cuarto Cuatrimesttre\Desarrollo web\Sem 1 html\Proyecto_tienda\Tienda\Tienda_m\src\main\java\com\tienda\TiendaApplication.java
+C:\Users\Yostin Arias\Desktop\Fidélitas\Cuarto Cuatrimesttre\Desarrollo web\Sem 1 html\Proyecto_tienda\Tienda\Tienda_m\src\main\java\com\tienda\controller\CategoriaController.java
+C:\Users\Yostin Arias\Desktop\Fidélitas\Cuarto Cuatrimesttre\Desarrollo web\Sem 1 html\Proyecto_tienda\Tienda\Tienda_m\src\main\java\com\tienda\dao\CreditoDao.java

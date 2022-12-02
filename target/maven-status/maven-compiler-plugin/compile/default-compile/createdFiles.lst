@@ -4,13 +4,17 @@ com\tienda\domain\Credito.class
 com\tienda\service\ArticuloServiceImpl.class
 com\tienda\service\CategoriaServiceImpl.class
 com\tienda\SecurityConfig.class
+com\tienda\service\UsuarioService.class
 com\tienda\domain\Categoria.class
 com\tienda\controller\CategoriaController.class
 com\tienda\WebConfig.class
 com\tienda\controller\IndexController.class
 com\tienda\domain\Cliente.class
+com\tienda\Encriptar.class
+com\tienda\domain\Rol.class
 com\tienda\service\ClienteServiceImpl.class
 com\tienda\dao\CreditoDao.class
+com\tienda\dao\UsuarioDao.class
 com\tienda\TiendaApplication.class
 com\tienda\controller\ClienteController.class
 com\tienda\service\CategoriaService.class
@@ -18,4 +22,5 @@ com\tienda\domain\Articulo.class
 com\tienda\service\ArticuloService.class
 com\tienda\dao\ArticuloDao.class
 com\tienda\dao\ClienteDao.class
+com\tienda\domain\Usuario.class
 com\tienda\dao\CategoriaDao.class
